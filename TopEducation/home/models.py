@@ -9,4 +9,5 @@ class Student(models.Model):
     branch = models.CharField( max_length=50) 
     fName = models.CharField( max_length=50) 
     city = models.CharField( max_length=50) 
+    year = models.CharField( max_length=50) 
     dob = models.DateField()
