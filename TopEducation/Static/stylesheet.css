@@ -51,7 +51,7 @@ nav ul li ul li a {
   z-index: 1;
   /* Guarantees that the dropdown will display on top of any content. */
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-  display: none;
+  display: block;
 }
 
 .nav-mobile {
