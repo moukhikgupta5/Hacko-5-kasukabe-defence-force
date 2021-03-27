@@ -7,6 +7,8 @@ from django.contrib.auth import logout,authenticate,login
 def home(request):
     user = request.user
     username = user.username
+    studnets = Student.objects.all()
+    print(studnets)
     context = {'username' : username}
     if request.user.is_anonymous:
         return redirect('/login')
