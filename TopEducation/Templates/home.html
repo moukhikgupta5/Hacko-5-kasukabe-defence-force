@@ -39,16 +39,16 @@ Following Tania Ruscia's tutorial on creating your own responsive dropdown navig
       </nav>
     </div>
   </section>
-  <h1 class = "welcome">Welcome {{user.username}}</h1>
+  <h1 class = "welcome">Welcome {{username}}! </h1>
   <div class="courses">
-    <div class="card" MadCap:conditions="role.dmo-reg-energy-spec, group.rbs,module.dmo-energy,prod.dmo"><div class="front"><div class="bg" style="background-image: url{% static 'imageforcard.png' %};"></div><p class="details"><!--<span class="duration">30 mins</span><span class="level">Basic</span></p>--><h3 class="title">Course A</h3><p class="button"><a class="btn" title="start course" href="#">Start Course</a></p></div><div class="back"><h3 class="title">Course A</h3>
+    <div class="card" MadCap:conditions="role.dmo-reg-energy-spec, group.rbs,module.dmo-energy,prod.dmo"><div class="front"><div class="bg" style=background-image:url("{% static 'imageforcard.png' %}");></div><p class="details"><!--<span class="duration">30 mins</span><span class="level">Basic</span></p>--><h3 class="title">Course A</h3><p class="button"><a class="btn" title="start course" href="#">Start Course</a></p></div><div class="back"><h3 class="title">Course A</h3>
         <p class="desc">Course A</p>
         <p class="button"><a class="btn" title="start course" href="#">Start Course</a></p>
       </div>
     </div>
     <div class="card" MadCap:conditions="role.dmo-reg-energy-spec, group.rbs,module.dmo-energy,prod.dmo">
       <div class="front">
-        <div class="bg" style="background-image: url{% static 'imageforcard.png' %};"></div>
+        <div class="bg" style=background-image:url("{% static 'imageforcard.png' %}");></div>
         <p class="details"><!--<span class="duration">30 mins</span><span class="level">Basic</span></p>-->
         <h3 class="title">Course B</h3>
         <p class="button"><a class="btn" title="start course" href="#">Start Course</a></p>
@@ -61,7 +61,7 @@ Following Tania Ruscia's tutorial on creating your own responsive dropdown navig
     </div>
     <div class="card" MadCap:conditions="role.dmo-reg-energy-spec, group.rbs,module.dmo-energy,prod.dmo">
       <div class="front">
-        <div class="bg" style="background-image: url{% static 'imageforcard.png' %};"></div>
+        <div class="bg" style=background-image:url("{% static 'imageforcard.png' %}");></div>
         <p class="details"><!--<span class="duration">30 mins</span><span class="level">Basic</span></p>-->
         <h3 class="title">Course C</h3>
         <p class="button"><a class="btn" title="start course" href="#">Start Course</a></p>
