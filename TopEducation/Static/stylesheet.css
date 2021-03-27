@@ -5,184 +5,212 @@ $breakpoint determines at which width the media query breakpoint will take effec
 */
 
 body {
-  background-color: #fff;
+    background-color: #fff;
 }
+
 nav {
-  float: right;
+    float: right;
 }
+
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
 nav ul li {
-  float: left;
-  position: relative;
+    float: left;
+    position: relative;
 }
+
 nav ul li a {
-  display: block;
-  padding: 0 20px;
-  line-height: 70px;
-  background: #EF7150;
-  color: #463f3f;
-  text-decoration: none;
-  /*
+    display: block;
+    padding: 0 20px;
+    line-height: 70px;
+    background: #EF7150;
+    color: #463f3f;
+    text-decoration: none;
+    /*
   The full path of this code is nav ul li a:not(:only-child):after. This means that the code will apply to any a tag in our nav list that is NOT an only child, aka any dropdown. The :after means it comes after the output of the tag. I’ve decided that to specify any nav item as a dropdown, it will be followed by a unicode arrow – ▾ (#9662).
   */
 }
+
 nav ul li a:hover {
-  background: #f2f2f2;
-  color: #fb5958;
+    background: white;
+    color: #fb5958;
 }
+
 nav ul li a:not(:only-child):after {
-  padding-left: 4px;
-  content: ' ▾';
+    padding-left: 4px;
+    content: ' ▾';
 }
+
 nav ul li ul li {
-  min-width: 190px;
+    min-width: 190px;
 }
+
 nav ul li ul li a {
-  padding: 15px;
-  line-height: 20px;
+    padding: 15px;
+    line-height: 20px;
 }
 
 .nav-dropdown {
-  position: absolute;
-  z-index: 1;
-  /* Guarantees that the dropdown will display on top of any content. */
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-  display: block;
+    position: absolute;
+    z-index: 1;
+    /* Guarantees that the dropdown will display on top of any content. */
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+    display: block;
 }
 
 .nav-mobile {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: #EF7150;
-  height: 70px;
-  width: 70px;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: EF7150;
+    height: 70px;
+    width: 70px;
 }
 
 @media only screen and (max-width: 800px) {
-  .nav-mobile {
-    display: block;
-  }
+    .nav-mobile {
+        display: block;
+    }
+    nav {
+        width: 100%;
+        padding: 70px 0 15px;
+    }
+    nav ul {
+        display: none;
+    }
+    nav ul li {
+        float: none;
+    }
+    nav ul li a {
+        padding: 15px;
+        line-height: 20px;
+    }
+    nav ul li ul li a {
+        padding-left: 30px;
+    }
+}
 
-  nav {
-    width: 100%;
-    padding: 70px 0 15px;
-  }
-  nav ul {
-    display: none;
-  }
-  nav ul li {
-    float: none;
-  }
-  nav ul li a {
-    padding: 15px;
-    line-height: 20px;
-  }
-  nav ul li ul li a {
-    padding-left: 30px;
-  }
-}
 #nav-toggle {
-  position: absolute;
-  left: 18px;
-  top: 22px;
-  cursor: pointer;
-  padding: 10px 35px 16px 0px;
+    position: absolute;
+    left: 18px;
+    top: 22px;
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
 }
+
 #nav-toggle span,
 #nav-toggle span:before,
 #nav-toggle span:after {
-  cursor: pointer;
-  border-radius: 1px;
-  height: 5px;
-  width: 35px;
-  background: #463f3f;
-  position: absolute;
-  display: block;
-  content: '';
-  transition: all 300ms ease-in-out;
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: #463f3f;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
 }
+
 #nav-toggle span:before {
-  top: -10px;
+    top: -10px;
 }
+
 #nav-toggle span:after {
-  bottom: -10px;
+    bottom: -10px;
 }
+
 #nav-toggle.active span {
-  background-color: transparent;
+    background-color: transparent;
 }
-#nav-toggle.active span:before, #nav-toggle.active span:after {
-  top: 0;
-}
-#nav-toggle.active span:before {
-  transform: rotate(45deg);
-}
+
+#nav-toggle.active span:before,
 #nav-toggle.active span:after {
-  transform: rotate(-45deg);
+    top: 0;
+}
+
+#nav-toggle.active span:before {
+    transform: rotate(45deg);
+}
+
+#nav-toggle.active span:after {
+    transform: rotate(-45deg);
 }
 
 @media screen and (min-width: 800px) {
-  .nav-list {
-    display: block !important;
-  }
+    .nav-list {
+        display: block !important;
+    }
 }
+
+
 /* 
 .navigation – the outer wrapper for the navbar. Specifies the height and color, and will stretch the full width of the viewport.
 */
+
 .navigation {
-  height: 70px;
-  background: #EF7150;
+    height: 70px;
+    background: #EF7150;
 }
+
 
 /*
 .nav-container – the inner wrapper for the navbar. Defines how far the actual content should stretch.
 */
+
 .nav-container {
-  max-width: 1000px;
-  margin: 0 auto;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .brand {
-  position: absolute;
-  padding-left: 20px;
-  float: left;
-  line-height: 70px;
-  text-transform: uppercase;
-  font-size: 1.4em;
+    position: absolute;
+    padding-left: 20px;
+    float: left;
+    line-height: 70px;
+    text-transform: uppercase;
+    font-size: 1.4em;
 }
+
 .brand a,
 .brand a:visited {
-  color: #463f3f;
-  text-decoration: none;
+    color: #463f3f;
+    text-decoration: none;
 }
+
+
 /*  site-specific styles that override common styles
 	modified 20 feb 2021 Homer
 */
+
+
 /* regular font is Nestle Text book */
 
 @font-face {
     font-family: Nestle-Book;
     src: url("../fonts/NestleTextTF-Book.ttf");
-  }
-  
-  /* font for headings is Nestle Text Bold Condensed */
-  
-  @font-face {
+}
+
+
+/* font for headings is Nestle Text Bold Condensed */
+
+@font-face {
     font-family: Nestle-Head;
     src: url("../fonts/NestleTextTF-BoldCnd.ttf");
-  }
-  
-  /*sets the color space 
+}
+
+
+/*sets the color space 
   
       NOTE:  All streams and products will share the same colors for consistency 
   */
-  
-  :root {
+
+ :root {
     --banner-height: 100px;
     --page-width: 1000px;
     --main-content-height: calc(100vh - var(--banner-height));
@@ -244,52 +272,16 @@ nav ul li ul li a {
     --respect-alt-dark: #6d2077;
     --respect-alt-light: #c98bdb;
     /* gradients */
-    --link-gradient: linear-gradient(
-      to bottom,
-      #007cba 30px,
-      rgba(0, 124, 186, 0.15) 30px,
-      rgba(0, 124, 186, 0.01) 100%
-    );
-    --active-gradient: linear-gradient(
-      to bottom,
-      #00818f 30px,
-      rgba(0, 175, 170, 0.15) 30px,
-      rgba(0, 175, 170, 0.01) 100%
-    );
-    --oak-gradient: linear-gradient(
-      to bottom,
-      rgba(209, 203, 197, 0.55) 30px,
-      rgba(209, 203, 197, 0.25) 30px,
-      rgba(209, 203, 197, 0.01) 100%
-    );
-    --blue-gradient: linear-gradient(
-      to bottom,
-      #0067a0 25px,
-      #0067a0 25px,
-      rgb(156, 219, 217) 100%
-    );
-    --purple-gradient: linear-gradient(
-      to bottom,
-      rgba(109, 32, 119, 1) 25px,
-      rgba(172, 79, 198, 0.65) 25px,
-      rgba(172, 79, 198, 0.05) 100%
-    );
-    --red-gradient: linear-gradient(
-      to bottom,
-      rgba(165, 0, 52, 1) 25px,
-      rgba(206, 55, 0, 1) 25px,
-      rgba(206, 55, 0, 0.05) 100%
-    );
-    --orange-gradient: linear-gradient(
-      to bottom,
-      rgba(252, 76, 2, 1) 25px,
-      white 25px,
-      white 100%
-    );
+    --link-gradient: linear-gradient( to bottom, #007cba 30px, rgba(0, 124, 186, 0.15) 30px, rgba(0, 124, 186, 0.01) 100%);
+    --active-gradient: linear-gradient( to bottom, #00818f 30px, rgba(0, 175, 170, 0.15) 30px, rgba(0, 175, 170, 0.01) 100%);
+    --oak-gradient: linear-gradient( to bottom, rgba(209, 203, 197, 0.55) 30px, rgba(209, 203, 197, 0.25) 30px, rgba(209, 203, 197, 0.01) 100%);
+    --blue-gradient: linear-gradient( to bottom, #0067a0 25px, #0067a0 25px, rgb(156, 219, 217) 100%);
+    --purple-gradient: linear-gradient( to bottom, rgba(109, 32, 119, 1) 25px, rgba(172, 79, 198, 0.65) 25px, rgba(172, 79, 198, 0.05) 100%);
+    --red-gradient: linear-gradient( to bottom, rgba(165, 0, 52, 1) 25px, rgba(206, 55, 0, 1) 25px, rgba(206, 55, 0, 0.05) 100%);
+    --orange-gradient: linear-gradient( to bottom, rgba(252, 76, 2, 1) 25px, white 25px, white 100%);
     --font-text: Nestle-Book, Helvetica, Arial, sanserif;
     --font-head: Nestle-Head, Helvetica, Arial, sanserif;
-    --font-script: "Nestle Script Office CYR", Nestle-Head, Helvetica, Arial,
-      sanserif;
+    --font-script: "Nestle Script Office CYR", Nestle-Head, Helvetica, Arial, sanserif;
     --black: #31261d;
     --black-light: rgba(128, 128, 128, 1);
     --black-lighter: rgba(206, 206, 206, 1);
@@ -344,11 +336,12 @@ nav ul li ul li a {
     --border-radius-small: 4px;
     --border-radius-med: 8px;
     --border-radius-large: 16px;
-  }
-  
-  /* Course Cards */
-  
-  div.courses {
+}
+
+
+/* Course Cards */
+
+div.courses {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -357,9 +350,9 @@ nav ul li ul li a {
     background-color: var(--individual);
     width: var(--page-width);
     position: relative;
-  }
-  
-  div.courses > div.card {
+}
+
+div.courses>div.card {
     background: white;
     font-family: var(--font-text);
     display: flex;
@@ -372,21 +365,22 @@ nav ul li ul li a {
     margin: 1rem;
     position: relative;
     overflow: hidden;
-  }
-  
-  @media screen and (max-width: 800px) {
+}
+
+@media screen and (max-width: 800px) {
     .card {
-      width: calc(50% - 2rem);
+        width: calc(50% - 2rem);
     }
-  }
-  @media screen and (max-width: 500px) {
+}
+
+@media screen and (max-width: 500px) {
     .card {
-      width: 100%;
+        width: 100%;
     }
-  }
-  
-  .front,
-  .back {
+}
+
+.front,
+.back {
     display: flex;
     flex-flow: row wrap;
     border-radius: 0;
@@ -395,15 +389,16 @@ nav ul li ul li a {
     width: 100%;
     background: white;
     transition: var(--transition-fast);
-  }
-  
-  .front {
+}
+
+.front {
     overflow: hidden;
     height: 100%;
     position: relative;
     justify-content: center;
-  }
-  .front:before {
+}
+
+.front:before {
     position: absolute;
     display: block;
     content: "";
@@ -412,24 +407,25 @@ nav ul li ul li a {
     right: 0;
     bottom: 0;
     z-index: -1;
-  }
-  
-  div.card div.bg {
+}
+
+div.card div.bg {
     height: 100px;
     width: calc(100% + 1px);
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
     background-image: url(../../Resources/Images/cards/sample/sample.jpg);
-  }
-  
-  .card .front p {
+}
+
+.card .front p {
     font-size: 0.85rem;
     margin: 0;
     text-align: center;
     width: 100%;
-  }
-  .card .front .details {
+}
+
+.card .front .details {
     position: absolute;
     top: 100px;
     background-color: var(--oak);
@@ -439,41 +435,45 @@ nav ul li ul li a {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
-  }
-  .card .front .details span {
+}
+
+.card .front .details span {
     margin: 0 auto;
     align-items: center;
-  }
-  
-  span.duration,
-  span.level {
+}
+
+span.duration,
+span.level {
     position: relative;
     padding-left: 0px;
-  }
-  span.duration:before {
+}
+
+span.duration:before {
     font-family: "FontAwesome";
     padding-right: 5px;
     content: "\f017";
-  }
-  span.level:before {
+}
+
+span.level:before {
     font-family: "FontAwesome";
     padding-right: 5px;
     content: "\f142";
-  }
-  
-  .card .front .title {
+}
+
+.card .front .title {
     font-family: var(--font-head);
     font-size: 1.25rem;
     margin: 0 10px;
     text-align: center;
     margin: 0;
     flex: 2 100%;
-  }
-  .card .button {
+}
+
+.card .button {
     width: 100%;
-  }
-  
-  div.card a.btn {
+}
+
+div.card a.btn {
     background-color: var(--link);
     text-decoration: none;
     color: white;
@@ -482,9 +482,9 @@ nav ul li ul li a {
     bottom: 10px;
     position: absolute;
     right: 10px;
-  }
-  
-  .back {
+}
+
+.back {
     text-align: left;
     background-color: var(--oak-lightest);
     position: absolute;
@@ -493,28 +493,27 @@ nav ul li ul li a {
     width: 100%;
     opacity: 0;
     transition: var(--transition-fast);
-  }
-  
-  .card:hover .back {
+}
+
+.card:hover .back {
     bottom: 0;
     -webkit-transition: all 0.2s, -webkit-transform 0.2s;
     transition: var(--transition);
     width: 100%;
     height: 100%;
     opacity: 1;
-  }
-  
-  .card .back h3.title {
+}
+
+.card .back h3.title {
     margin: 10px;
     font-size: 1rem;
-  }
-  
-  .back p.desc {
+}
+
+.back p.desc {
     overflow: elipsis;
     padding: 0 10px;
     margin: 6px 0 0 0;
     line-height: 1.1;
     color: var(--oak-dark);
     flex: 2 100%;
-  }
-  
+}
