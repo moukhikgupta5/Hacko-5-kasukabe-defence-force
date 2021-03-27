@@ -8,6 +8,7 @@ def home(request):
     user = request.user
     username = user.username
     studnets = Student.objects.all()
+    
     context = {'username' : username}
     if request.user.is_anonymous:
         return redirect('/login')
