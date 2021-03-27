@@ -24,12 +24,15 @@ nav ul li {
 }
 
 nav ul li a {
-    display: block;
-    padding: 0 20px;
-    line-height: 70px;
-    background: #EF7150;
-    color: #463f3f;
-    text-decoration: none;
+  display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  background: #EF7150;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: large;
+  letter-spacing: 1px;
     /*
   The full path of this code is nav ul li a:not(:only-child):after. This means that the code will apply to any a tag in our nav list that is NOT an only child, aka any dropdown. The :after means it comes after the output of the tag. I’ve decided that to specify any nav item as a dropdown, it will be followed by a unicode arrow – ▾ (#9662).
   */
@@ -347,7 +350,8 @@ div.courses {
     justify-content: center;
     margin: auto;
     padding: 0;
-    background-color: var(--individual);
+padding-top: 100px;
+    /*background-color: var(--individual);*/
     width: var(--page-width);
     position: relative;
 }
@@ -474,7 +478,7 @@ span.level:before {
 }
 
 div.card a.btn {
-    background-color: var(--link);
+    background-color: #EF7150;
     text-decoration: none;
     color: white;
     padding: 5px;
@@ -517,3 +521,9 @@ div.card a.btn {
     color: var(--oak-dark);
     flex: 2 100%;
 }
+
+.welcome{
+    color:#616266;
+    font-size: large;
+    text-align: right;
+  }
