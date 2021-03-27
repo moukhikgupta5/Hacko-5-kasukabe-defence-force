@@ -18,14 +18,14 @@ def home(request):
     useremail = user.email
     emailsubject = "Login on your TopEd Account"
     email = EmailMessage(
-    'Hello',
-    'Body goes here',
-    'moukhikgupta5@google.com',
+    'Login Notification',
+    'We found a new login',
+    'moukhikgupta5@gmail.com',
     ['nonu592002@gmail.com'],
     # reply_to=['another@example.com'],
     # headers={'Message-ID': 'foo'},
     )
-    # email.send()
+    email.send()
     context = {'username' : name,'rollno' : rollno}
     return render(request,'home.html',context)
 def loginuser(request):
@@ -55,5 +55,8 @@ def index(request):
     rollno = std.rollno
     phone = std.phone
     useremail = user.email
-    context = {'username' : name,'rollno' : rollno,'email' : useremail,'phone':phone,'fname':std.fName,'branch':std.branch}
+    context = {'username' : name,'rollno' : rollno,'email' : useremail,
+                'phone':phone,'fname':std.fName,'branch':std.branch,
+                'year' : std.year,'city':std.city,'dob':std.dob    
+            }
     return render(request,'index.html',context)
