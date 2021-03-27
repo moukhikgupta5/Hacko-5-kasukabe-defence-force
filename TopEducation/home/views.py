@@ -8,7 +8,6 @@ def home(request):
     user = request.user
     username = user.username
     studnets = Student.objects.all()
-    print(studnets)
     context = {'username' : username}
     if request.user.is_anonymous:
         return redirect('/login')
@@ -17,8 +16,6 @@ def loginuser(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
-        print(username)
-        print(password)
         user = authenticate(username = username,password = password)
         if user is not None:
             login(request, user)
