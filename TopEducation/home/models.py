@@ -11,7 +11,7 @@ class Student(models.Model):
     year = models.CharField( max_length=50) 
     dob = models.DateField()
     def __str__(self):
-        return self.user.usernane
+        return self.user.username
 class Teacher (models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE,default='')
     phone = models.CharField( max_length=50) 
