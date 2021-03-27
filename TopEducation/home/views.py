@@ -9,7 +9,7 @@ def home(request):
     context = {'username' : username}
     if request.user.is_anonymous:
         return redirect('/login')
-    return HttpResponse('<h>Welcome to the Home page!</h1>')
+    return render(request,'home.html')
 def loginuser(request):
     if request.method == 'POST':
         username = request.POST.get('username')
