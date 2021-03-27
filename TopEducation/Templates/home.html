@@ -8,7 +8,7 @@
     <link rel="stylesheet" href= {% static 'stylesheet.css' %}>
     <title>Document</title>
 </head>
-<body>
+<body background = {% static "background.png" %}>
     <!-- 
 Following Tania Ruscia's tutorial on creating your own responsive dropdown navigation bar. https://www.taniarascia.com/responsive-dropdown-navigation-bar/
 -->
@@ -39,17 +39,17 @@ Following Tania Ruscia's tutorial on creating your own responsive dropdown navig
       </nav>
     </div>
   </section>
-  <h1>Welcome {{user.username}}</h1>
+  <h1 class = "welcome">Welcome {{user.username}}</h1>
   <div class="courses">
-    <div class="card" MadCap:conditions="role.dmo-reg-energy-spec, group.rbs,module.dmo-energy,prod.dmo"><div class="front"><div class="bg" style="background-image: url('jpg');"></div><p class="details"><span class="duration">30 mins</span><span class="level">Basic</span></p><h3 class="title">Course A</h3><p class="button"><a class="btn" title="start course" href="#">Start Course</a></p></div><div class="back"><h3 class="title">Course A</h3>
+    <div class="card" MadCap:conditions="role.dmo-reg-energy-spec, group.rbs,module.dmo-energy,prod.dmo"><div class="front"><div class="bg" style="background-image: url{% static 'imageforcard.png' %};"></div><p class="details"><!--<span class="duration">30 mins</span><span class="level">Basic</span></p>--><h3 class="title">Course A</h3><p class="button"><a class="btn" title="start course" href="#">Start Course</a></p></div><div class="back"><h3 class="title">Course A</h3>
         <p class="desc">Course A</p>
         <p class="button"><a class="btn" title="start course" href="#">Start Course</a></p>
       </div>
     </div>
     <div class="card" MadCap:conditions="role.dmo-reg-energy-spec, group.rbs,module.dmo-energy,prod.dmo">
       <div class="front">
-        <div class="bg" style="background-image: url('https://images.unsplash.com/photo-1614308460927-5024ba2e1dcb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNTg0MDI0MQ&ixlib=rb-1.2.1&q=80&w=400');"></div>
-        <p class="details"><span class="duration">30 mins</span><span class="level">Basic</span></p>
+        <div class="bg" style="background-image: url{% static 'imageforcard.png' %};"></div>
+        <p class="details"><!--<span class="duration">30 mins</span><span class="level">Basic</span></p>-->
         <h3 class="title">Course B</h3>
         <p class="button"><a class="btn" title="start course" href="#">Start Course</a></p>
       </div>
@@ -61,8 +61,8 @@ Following Tania Ruscia's tutorial on creating your own responsive dropdown navig
     </div>
     <div class="card" MadCap:conditions="role.dmo-reg-energy-spec, group.rbs,module.dmo-energy,prod.dmo">
       <div class="front">
-        <div class="bg" style="background-image: url('https://images.unsplash.com/photo-1614308460927-5024ba2e1dcb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNTg0MDI0MQ&ixlib=rb-1.2.1&q=80&w=400');"></div>
-        <p class="details"><span class="duration">30 mins</span><span class="level">Basic</span></p>
+        <div class="bg" style="background-image: url{% static 'imageforcard.png' %};"></div>
+        <p class="details"><!--<span class="duration">30 mins</span><span class="level">Basic</span></p>-->
         <h3 class="title">Course C</h3>
         <p class="button"><a class="btn" title="start course" href="#">Start Course</a></p>
       </div>
