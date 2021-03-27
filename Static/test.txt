@@ -1,1 +1,0 @@
-this is a test file to chech if static is running or not.
