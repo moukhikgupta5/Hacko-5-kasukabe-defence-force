@@ -6,18 +6,18 @@ from django.contrib.auth import logout,authenticate,login
 def home(request):
     if request.user.is_anonymous:
         return redirect('/login')
-    return render(request,'home.html')
+    return HttpResponse('<h>Welcome to the Home page!</h1>')
 def loginuser(request):
     if request.method == 'POST':
         username = request.POST.get('username')
-        username = request.POST.get('password')
-        user = authenticate(username = username,password=password)
+        password = request.POST.get('password')
+        user = authenticate(username = username,password = password)
         if user is not None:
             login(request, user)
-            return redirect('/home')
+            return redirect('/')
         else:
-            return HttpResponse('<h>Welcome to the login page!</h1>')
-    return HttpResponse('<h1>Welcome to the login page!</h1>')
+            return render(request,'login.html')
+    return render(request,'login.html')
 def logoutuser(request):
     logout(request)
     return redirect('/login')
