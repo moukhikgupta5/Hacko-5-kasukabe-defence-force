@@ -42,3 +42,18 @@ def loginuser(request):
 def logoutuser(request):
     logout(request)
     return redirect('/login')
+
+def index(request):
+    if request.user.is_anonymous:
+        return redirect('/login')
+    user = request.user
+    name = user.username
+    studnets = Student.objects.all()
+    for std in studnets:
+        if std.user.username == name:
+            break
+    rollno = std.rollno
+    phone = std.phone
+    useremail = user.email
+    context = {'username' : name,'rollno' : rollno,'email' : useremail,'phone':phone,'fname':std.fName,'branch':std.branch}
+    return render(request,'index.html',context)

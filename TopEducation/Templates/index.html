@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +7,7 @@
     <title>CodePen - User Profile with edit </title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
-    <link rel="stylesheet" href={% static 'style.css' %}>
+    <link rel="stylesheet" href= {% static 'style.css' %} >
 
 </head>
 
@@ -34,7 +35,7 @@
                                 <ul>
                                     <li><i class="fa fa-tasks"></i> Business development</li>
                                     <li><i class="fa fa-users"></i> DHL</li>
-                                    <li><i class="fa fa-phone"></i> 00971 12345678</li>
+                                    <li><i class="fa fa-phone"></i> {{phone}}</li>
                                     <li><i class="fa fa-envelope"></i> joedoe@gmail.com</li>
                                 </ul>
                             </div>
@@ -62,11 +63,11 @@
                                     <div class="profile-view">
                                         <dl class="dl-horizontal">
                                             <dt>Full Name</dt>
-                                            <dd>Joe Doe</dd>
+                                            <dd> {{username}}</dd>
                                         </dl>
                                         <dl class="dl-horizontal">
-                                            <dt>Role</dt>
-                                            <dd>Business development</dd>
+                                            <dt>Father's Name</dt>
+                                            <dd>{{f}}</dd>
                                         </dl>
                                         <dl class="dl-horizontal">
                                             <dt>Client Associated</dt>
@@ -78,7 +79,7 @@
                                         </dl>
                                         <dl class="dl-horizontal">
                                             <dt>Email</dt>
-                                            <dd>joedoe@gmail.com</dd>
+                                            <dd>{{email}}</dd>
                                         </dl>
                                     </div>
                                     <!--<div class="profile-edit">
