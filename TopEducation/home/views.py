@@ -21,8 +21,8 @@ def home(request):
     email = EmailMessage(
     'Login Notification',
     'We found a new login',
-    'moukhikgupta5@gmail.com',
-    ['nonu592002@gmail.com'],
+    'portaltoportal@123',
+    [email,'nonu592002@gmail.com'],
     # reply_to=['another@example.com'],
     # headers={'Message-ID': 'foo'},
     )
