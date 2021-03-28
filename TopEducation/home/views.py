@@ -25,7 +25,7 @@ def home(request):
     # reply_to=['another@example.com'],
     # headers={'Message-ID': 'foo'},
     )
-    email.send()
+    #email.send()
     context = {'username' : name,'rollno' : rollno}
     return render(request,'home.html',context)
 def loginuser(request):
