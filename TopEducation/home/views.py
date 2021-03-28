@@ -1,9 +1,10 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
-from home.models import Student
+from home.models import Student,Teacher
 from django.contrib.auth import logout,authenticate,login
 from django.core.mail import EmailMessage
+from django.urls import resolve
 
 def home(request):
     if request.user.is_anonymous:
@@ -61,3 +62,23 @@ def index(request):
                 'year' : std.year,'city':std.city,'dob':std.dob,'fullname':fullname    
             }
     return render(request,'index.html',context)
+
+def course(request):
+    if request.user.is_anonymous:
+        return redirect('/login')
+    current_url = resolve(request.path_info).url_name
+    tachers = Teacher.objects.all
+    # for t in tachers:
+    #     if t.subject == 'maths':
+    #       maths = t
+    #       elif t.subject == 'physics':
+            # phy = y
+            # else:
+            #     chem = t
+    if current_url == 'courseA':
+        return render(request,'CourseA.html')
+    elif current_url == 'courseB':
+        return render(request, 'CourseB.html')
+    else :
+        return render(request, 'coursec.html')
+    
