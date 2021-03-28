@@ -55,8 +55,9 @@ def index(request):
     rollno = std.rollno
     phone = std.phone
     useremail = user.email
+    fullname =  request.user.get_full_name()
     context = {'username' : name,'rollno' : rollno,'email' : useremail,
                 'phone':phone,'fname':std.fName,'branch':std.branch,
-                'year' : std.year,'city':std.city,'dob':std.dob    
+                'year' : std.year,'city':std.city,'dob':std.dob,'fullname':fullname    
             }
     return render(request,'index.html',context)

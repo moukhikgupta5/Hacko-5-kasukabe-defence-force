@@ -18,7 +18,7 @@
             <div class="panel profile-panel">
                 <div class="panel-heading">
                     <div class="text-left">
-                        <h2>Joe Doe</h2>
+                        <h2>{{username}}</h2>
                     </div>
                 </div>
                 <!-- panel body -->
@@ -33,10 +33,10 @@
                             <div class="profile-details">
                                 <h2>Contact</h2>
                                 <ul>
-                                    <li><i class="fa fa-tasks"></i> Business development</li>
-                                    <li><i class="fa fa-users"></i> DHL</li>
                                     <li><i class="fa fa-phone"></i> {{phone}}</li>
-                                    <li><i class="fa fa-envelope"></i> joedoe@gmail.com</li>
+                                    <li><i class="fa fa-envelope"></i>{{email}} </li>
+                                    <li><i class="fa fa-tasks"></i>{{city}} </li>
+                                    <li><i class="fa fa-users"></i> {{branch}}</li>
                                 </ul>
                             </div>
                         </div>
@@ -63,23 +63,23 @@
                                     <div class="profile-view">
                                         <dl class="dl-horizontal">
                                             <dt>Full Name</dt>
-                                            <dd> {{username}}</dd>
+                                            <dd> {{fullname}}</dd>
                                         </dl>
                                         <dl class="dl-horizontal">
                                             <dt>Father's Name</dt>
-                                            <dd>{{f}}</dd>
+                                            <dd>{{fname}}</dd>
                                         </dl>
                                         <dl class="dl-horizontal">
-                                            <dt>Client Associated</dt>
-                                            <dd>DHL</dd>
+                                            <dt>Roll Number</dt>
+                                            <dd>{{rollno}}</dd>
                                         </dl>
                                         <dl class="dl-horizontal">
-                                            <dt>Phone</dt>
-                                            <dd>00971 12345678</dd>
+                                            <dt>Year</dt>
+                                            <dd>{{year}}</dd>
                                         </dl>
                                         <dl class="dl-horizontal">
-                                            <dt>Email</dt>
-                                            <dd>{{email}}</dd>
+                                            <dt>DOB</dt>
+                                            <dd>{{dob}}</dd>
                                         </dl>
                                     </div>
                                     <!--<div class="profile-edit">
@@ -103,40 +103,6 @@
                                                 </div>
                                             </dd>
                                         </dl>-->
-                                    <dl class="dl-horizontal">
-                                        <dt class="p-10">Client Associated</dt>
-                                        <dd>
-                                            <div class="fg-line">
-                                                <select class="form-control">
-                                                                    <option>DHL</option>
-                                                                    <option>Pepsico</option>
-                                                                    <option>Addidas</option>
-                                                                    <option>Nike</option>
-                                                                </select>
-                                            </div>
-                                        </dd>
-                                    </dl>
-                                    <dl class="dl-horizontal">
-                                        <dt class="p-10">Phone</dt>
-                                        <dd>
-                                            <div class="fg-line">
-                                                <input type="text" class="form-control" placeholder="eg. 00971 12345678">
-                                            </div>
-                                        </dd>
-                                    </dl>
-                                    <dl class="dl-horizontal">
-                                        <dt class="p-10">Email</dt>
-                                        <dd>
-                                            <div class="fg-line">
-                                                <input type="text" class="form-control" placeholder="eg. 00971 12345678">
-                                            </div>
-                                        </dd>
-                                    </dl>
-
-                                    <div class="m-t-30">
-                                        <button class="btn btn-primary btn-sm waves-effect">Save</button>
-                                        <button data-profile-action="reset" class="btn-link btn-cancel">Cancel</button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
